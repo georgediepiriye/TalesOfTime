@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Admin\AdminAddBrandComponent;
 use App\Http\Livewire\Admin\AdminBrandComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
@@ -22,5 +23,5 @@ Route::get('/',HomeComponent::class);
 
 //Admin
 Route::get('/admin/brands',AdminBrandComponent::class)->name('admin.brands');
-Route::get('/admin/category/add',AdminAddCategoryComponent::class)->name('admin.addcategory');
-Route::get('/admin/category/edit/{category_slug}',AdminEditCategoryComponent::class)->name('admin.editcategory');
+ Route::get('/admin/brand/add',AdminAddBrandComponent::class)->name('admin.addbrand');
+// Route::get('/admin/category/edit/{category_slug}',AdminEditCategoryComponent::class)->name('admin.editcategory');
