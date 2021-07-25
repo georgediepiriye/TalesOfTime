@@ -5,8 +5,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
-                        <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> TalesofTime</strong></h1>
+                        <p class="m-b-40">Style Created with Time...</p>
                         <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                     </div>
                 </div>
@@ -17,8 +17,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
-                        <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> TalesofTime</strong></h1>
+                        <p class="m-b-40">Style Created with Time...</p>
                         <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                     </div>
                 </div>
@@ -29,8 +29,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
-                        <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
+                        <h1 class="m-b-20"><strong>Welcome To <br> TalesofTime</strong></h1>
+                        <p class="m-b-40">Style Created with Time...</p>
                         <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                     </div>
                 </div>

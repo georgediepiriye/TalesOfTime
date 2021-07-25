@@ -80,17 +80,26 @@
 						<option>$ USD</option>
 						<option>€ EUR</option>
 					</select>
+                    
                     </div>
+                   
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                        <p>Call US :- <a href="#"> +2348066738338</a></p>
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Our location</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            
+                            @if (Auth::user())
+                              <li><a href="#">Logout</a></li>
+                            @else 
+                            <li><a href="#">Login</a></li>
+                            <li><a href="#">Register</a></li>
+                            @endif
+                           
+                           
                         </ul>
                     </div>
+                  
                 </div>
             </div>
         </div>
@@ -116,10 +125,7 @@
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="dropdown megamenu-fw">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Shop</a>
-                         
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">Shop</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Brands</a>
                             <ul class="dropdown-menu">
@@ -131,7 +137,7 @@
                                 <li><a href="shop-detail.html">Shop Detail</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="service.html">Cart</a></li>
+                       
                         <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
@@ -142,6 +148,7 @@
                     <ul>
                        
                         <li class="side-menu"><a href="#">
+                         <span ><b style="font-size: 16px !important;">Cart</b></span>   
 						<i class="fa fa-shopping-bag"></i>
                             <span class="badge">3</span>
 					</a></li>
@@ -149,34 +156,7 @@
                 </div>
                 <!-- End Atribute Navigation -->
             </div>
-            <!-- Start Side Menu -->
-            <div class="side">
-                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <li class="cart-box">
-                    <ul class="cart-list">
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Delica omtantur </a></h6>
-                            <p>1x - <span class="price">$80.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Omnes ocurreret</a></h6>
-                            <p>1x - <span class="price">$60.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Agam facilisis</a></h6>
-                            <p>1x - <span class="price">$40.00</span></p>
-                        </li>
-                        <li class="total">
-                            <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
-                            <span class="float-right"><strong>Total</strong>: $180.00</span>
-                        </li>
-                    </ul>
-                </li>
-            </div>
-            <!-- End Side Menu -->
+      
         </nav>
         <!-- End Navigation -->
     </header>
