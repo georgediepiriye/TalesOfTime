@@ -7,7 +7,7 @@ use Livewire\Component;
 
 use Illuminate\Support\Str;
 
-class AdminAddCategoryComponent extends Component
+class AdminAddBrandComponent extends Component
 { 
     public $name,$slug;
     public function generateSlug(){
