@@ -565,8 +565,7 @@
      border: solid 1px #e0e0e0;
      left: auto;
 }
- .btn-cart{
-}
+ 
  .cart-list h6 a{
      font-size: 16px;
      font-weight: 700;
@@ -622,7 +621,8 @@
      transform: scaleY(1);
      color: #ffffff;
 }
-
+ .hvr-hover{
+}
  ul.cart-list > li.total > .btn:hover{
      color: #ffffff;
 }
@@ -827,7 +827,8 @@
  .filter-button-group button.active{
      background: #010101;
 }
-
+ .filter-button-group button{
+}
  .products-single {
      overflow: hidden;
      position: relative;
@@ -1000,52 +1001,7 @@
          -webkit-transform: translateY(0px);
     }
 }
-/*------------------------------------------------------------------ Blog -------------------------------------------------------------------*/
- .latest-blog{
-     padding: 70px 0px;
-     background: #f5f5f5;
-}
- .blog-box{
-     -webkit-box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
-     box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
-     background: #ffffff;
-     margin-bottom: 30px;
-}
- .blog-content{
-     position: relative;
-}
- .title-blog{
-     padding: 30px 15px 30px 45px;
-}
- .title-blog h3{
-     font-size: 20px;
-     font-weight: 700;
-     color: #010101;
-}
- .title-blog p{
-     margin: 0px;
-}
- .option-blog {
-     position: absolute;
-     top: 0px;
-     left: 0px;
-     top: 50%;
-     transform: translate(0%,-50%);
-}
- .option-blog li a{
-     background: #010101;
-     display: inline-block;
-     font-size: 18px;
-     color: #ffffff;
-     width: 34px;
-     height: 34px;
-     text-align: center;
-     line-height: 34px;
-}
- .option-blog li a:hover{
-     background: #d33b33;
-     color: #ffffff;
-}
+
  .tooltip-inner {
      background-color: #d33b33;
 }
@@ -1066,7 +1022,7 @@
 /*------------------------------------------------------------------ Instagram Feed -------------------------------------------------------------------*/
  .instagram-box{
      padding: 70px 0px;
-     background: url(../images/ins-bg.jpg) no-repeat center center;
+     background: url(../images/banner-03.jpg) no-repeat center center;
      background-size: auto auto;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -1334,7 +1290,7 @@
 }
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
  .all-title-box{
-     background: url("../images/all-bg-title.jpg") no-repeat center center;
+     background: url("../images/banner-02.jpg") no-repeat center center;
      -webkit-background-size: cover;
      -moz-background-size: cover;
      -ms-background-size: cover;
@@ -1893,31 +1849,35 @@
  .coupon-box .input-group .input-group-append .btn-theme:hover {
      background: #d33b33;
 }
- .update-box input[type="submit"]{
-     background: #010101;
-     border: medium none;
-     border-radius: 0;
-     -webkit-box-shadow: none;
-     box-shadow: none;
-     color: #fff;
-     display: inline-block;
-     float: right;
-     cursor: pointer;
-     font-size: 16px;
-     font-weight: 500;
-     height: 50px;
-     line-height: 40px;
-     margin-right: 15px;
-     padding: 0 20px;
-     text-shadow: none;
-     text-transform: uppercase;
-     -webkit-transition: all 0.3s ease 0s;
-     transition: all 0.3s ease 0s;
-     white-space: nowrap;
-     width: inherit;
+
+
+.update-box a{
+    background: #010101;
+    border: medium none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #fff;
+    display: inline-block;
+    float: right;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    height: 50px;
+    line-height: 40px;
+    margin-right: 15px;
+    padding: 7px 20px;
+    text-shadow: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    white-space: nowrap;
+    width: inherit;
 }
- .update-box input[type="submit"]:hover{
-     background: #d33b33;
+
+
+.update-box a:hover{
+    background: #d33b33;
 }
  .order-box h3{
      font-size: 16px;
@@ -1994,7 +1954,7 @@
 }
  .new-account-login h5 {
      font-size: 18px;
-     color: #1111111;
+  
      font-weight: 600;
 }
  .new-account-login h5 a:hover{
@@ -2327,7 +2287,7 @@
      color: #ffffff;
 }
  .quantity-box input{
-     width: 100%;
+     width: 50%;
 }
  .price-box-bar{
      margin-bottom: 30px;
@@ -2350,8 +2310,7 @@
      color: #ffffff;
      border: none;
 }
- .share-bar{
-}
+
  .share-bar a {
      background: #d33b33;
      color: #ffffff;
@@ -2360,10 +2319,7 @@
      width: 34px;
      text-align: center;
 }
- .share-bar a {
-}
- .featured-products-box{
-}
+
  .featured-products-box .owl-nav{
      position: absolute;
      margin: 0 auto;
@@ -2394,7 +2350,177 @@
      white-space: nowrap;
 }
  
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: 0.75rem;
+  }
+  
+   .login{
+       margin-top: 50px;
+       margin-bottom: 50px;
+   }
+  .image {
+    min-height: 100vh;
+  }
+  
+  .bg-image {
+    background: url(../images/banner-3.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .login-heading {
+    font-weight: 300;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    background-color: #d33b33;
+  }
 
+  .btn-login:hover{
+    background-color: black;
+
+  }
+  
+  .form-label-group {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+  
+  .form-label-group>input,
+  .form-label-group>label {
+    padding: var(--input-padding-y) var(--input-padding-x);
+    height: auto;
+    border-radius: 2rem;
+  }
+  
+  .form-label-group>label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* Override default `<label>` margin */
+    line-height: 1.5;
+    color: #495057;
+    cursor: text;
+    /* Match the input under the label */
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    transition: all .1s ease-in-out;
+  }
+  
+  .form-label-group input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-ms-input-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::-moz-placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input::placeholder {
+    color: transparent;
+  }
+  
+  .form-label-group input:not(:placeholder-shown) {
+    padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+    padding-bottom: calc(var(--input-padding-y) / 3);
+  }
+  
+  .form-label-group input:not(:placeholder-shown)~label {
+    padding-top: calc(var(--input-padding-y) / 3);
+    padding-bottom: calc(var(--input-padding-y) / 3);
+    font-size: 12px;
+    color: #777;
+  }
+
+  .validation-errors{
+      color: red;
+  }
+
+  
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    
+  }
+  
+  .pagination a.active {
+    background-color: #d33b33 !important;
+    color: white;
+  }
+
+  .pagination .active{
+      color: #d33b33 ;
+    background-color: #d33b33 !important;
+  }
+ 
+
+  .pagination a:hover:not(.active) {background-color: #ddd;}
+  
+  .btn-reduce{
+      background-color: rgb(228, 222, 222);
+  }
+  .btn-reduce :hover{
+      background-color: #d33b33 !important;
+  }
+  .btn-increase{
+    background-color: rgb(228, 222, 222);
+}
+.btn-increase :hover{
+    background-color: #d33b33 !important;
+}
+
+.fill-heart{
+    background-color: black;
+    padding: 5px 10px;
+    display: block;
+   
+
+}
+
+
+  
+  /* Fallback for Edge
+  -------------------------------------------------- */
+  
+  @supports (-ms-ime-align: auto) {
+    .form-label-group>label {
+      display: none;
+    }
+    .form-label-group input::-ms-input-placeholder {
+      color: #777;
+    }
+  }
+  
+  /* Fallback for IE
+  -------------------------------------------------- */
+  
+  @media all and (-ms-high-contrast: none),
+  (-ms-high-contrast: active) {
+    .form-label-group>label {
+      display: none;
+    }
+    .form-label-group input:-ms-input-placeholder {
+      color: #777;
+    }
+  }
+  
 
 
 
