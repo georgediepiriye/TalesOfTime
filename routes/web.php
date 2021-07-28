@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\BrandComponent;
+use App\Http\Livewire\ProductDetailsComponent;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +28,7 @@ use App\Http\Livewire\BrandComponent;
 Route::get('/',HomeComponent::class)->name('home');
 Route::get('/shop',ShopComponent::class)->name('shop');
 Route::get('/products/brand/{brand_slug}',BrandComponent::class)->name('products.brand');
+Route::get('/product/{product_slug}',ProductDetailsComponent::class)->name('product.details');
   
 
 //Admin

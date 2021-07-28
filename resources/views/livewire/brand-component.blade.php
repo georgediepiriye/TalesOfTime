@@ -84,7 +84,7 @@
                                                    <img src="{{ $product->image1 }}" class="img-fluid" alt="Image">
                                                    <div class="mask-icon">
                                                        <ul>
-                                                           <li><a href="" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                                           <li><a href="{{ route('product.details',['product_slug'=>$product->slug]) }}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                                           
                                                        </ul>
                                                        <a class="cart" href="#">Add to Cart</a>
