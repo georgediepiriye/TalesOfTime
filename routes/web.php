@@ -9,6 +9,7 @@ use App\Http\Livewire\Admin\AdminProductComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
+use App\Http\Livewire\BrandComponent;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +25,7 @@ use App\Http\Livewire\ShopComponent;
 
 Route::get('/',HomeComponent::class)->name('home');
 Route::get('/shop',ShopComponent::class)->name('shop');
+Route::get('/products/brand/{brand_slug}',BrandComponent::class)->name('products.brand');
   
 
 //Admin
@@ -33,6 +35,5 @@ Route::get('/admin/brand/edit/{brand_slug}',AdminEditBrandComponent::class)->nam
 Route::get('/admin.products',AdminProductComponent::class)->name('admin.products');
 Route::get('/admin/add-product',[AdminAddProductController::class,'index'])->name('admin.addproduct');
 Route::post('admin/add_an_item',[AdminAddProductController::class,'addItem'])->name('add_an_item')->middleware('auth');
-
 Route::get('admin/edit_product/{product_id}',[AdminEditProductController::class,'index'])->name('admin.editproduct')->middleware('auth');
 Route::post('admin/update/{product_id}',[AdminEditProductController::class,'update'])->name('update')->middleware('auth');

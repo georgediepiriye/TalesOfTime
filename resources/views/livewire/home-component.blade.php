@@ -58,32 +58,32 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
-                    <img class="img-fluid" src="images/t-shirts-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Rolex</a>
+                    <img class="img-fluid" src="{{ asset('images/rol1.jpg') }}" alt="" />
+                    <a class="btn hvr-hover" href="{{ route('products.brand',['brand_slug'=>'rolex']) }}">Rolex</a>
                 </div>
                 <div class="shop-cat-box">
-                    <img class="img-fluid" src="images/shirt-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Angela Bos</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="shop-cat-box">
-                    <img class="img-fluid" src="images/wallet-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Baogela</a>
-                </div>
-                <div class="shop-cat-box">
-                    <img class="img-fluid" src="images/women-bag-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Fngeen</a>
+                    <img class="img-fluid" src="{{ asset('images/ab1.jpg') }}" alt="" />
+                    <a class="btn hvr-hover" href="{{ route('products.brand',['brand_slug'=>'angela-bos']) }}">Angela Bos</a>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
-                    <img class="img-fluid" src="images/shoes-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Michael Kors</a>
+                    <img class="img-fluid" src="{{ asset('images/bao1.jpg') }}" alt="" />
+                    <a class="btn hvr-hover" href="{{ route('products.brand',['brand_slug'=>'baogela']) }}">Baogela</a>
                 </div>
                 <div class="shop-cat-box">
-                    <img class="img-fluid" src="images/women-shoes-img.jpg" alt="" />
-                    <a class="btn hvr-hover" href="#">Skone</a>
+                    <img class="img-fluid" src="{{ asset('images/fn1.jpg') }}" alt="" />
+                    <a class="btn hvr-hover" href="{{ route('products.brand',['brand_slug'=>'fngeen']) }}">Fngeen</a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="shop-cat-box">
+                    <img class="img-fluid" src="{{ asset('images/mc1.jpg') }}" alt="" />
+                    <a class="btn hvr-hover" href="{{ route('products.brand',['brand_slug'=>'michael-kors']) }}">Michael Kors</a>
+                </div>
+                <div class="shop-cat-box">
+                    <img class="img-fluid" src="{{ asset('images/sk1.jpg') }}" alt="" />
+                    <a class="btn hvr-hover" href="{{ route('products.brand',['brand_slug'=>'skone']) }}">Skone</a>
                 </div>
             </div>
         </div>
@@ -98,7 +98,7 @@
             <div class="col-lg-12">
                 <div class="title-all text-center">
                     <h1>Featured Products</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                   
                 </div>
             </div>
         </div>
@@ -222,58 +222,95 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 col-xl-4">
-                <div class="blog-box">
-                    <div class="blog-img">
-                        <img class="img-fluid" src="images/blog-img.jpg" alt="" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="title-blog">
-                            <h3>Fusce in augue non nisi fringilla</h3>
-                            <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+        <div class="row ">
+            <div class="col-lg-3 col-md-6 ">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+                        <div class="type-lb">
+                            <p class="sale">Sale</p>
                         </div>
-                        <ul class="option-blog">
-                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i class="fas fa-eye"></i></a></li>
-                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i class="far fa-comments"></i></a></li>
-                        </ul>
+                        <img src="images/img-pro-01.jpg" class="img-fluid" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                            </ul>
+                            <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5> $7.79</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 col-xl-4">
-                <div class="blog-box">
-                    <div class="blog-img">
-                        <img class="img-fluid" src="images/blog-img-01.jpg" alt="" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="title-blog">
-                            <h3>Fusce in augue non nisi fringilla</h3>
-                            <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+
+            <div class="col-lg-3 col-md-6 ">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+                        <div class="type-lb">
+                            <p class="new">New</p>
                         </div>
-                        <ul class="option-blog">
-                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i class="fas fa-eye"></i></a></li>
-                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i class="far fa-comments"></i></a></li>
-                        </ul>
+                        <img src="images/img-pro-02.jpg" class="img-fluid" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                            </ul>
+                            <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5> $9.79</h5>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 col-xl-4">
-                <div class="blog-box">
-                    <div class="blog-img">
-                        <img class="img-fluid" src="images/blog-img-02.jpg" alt="" />
-                    </div>
-                    <div class="blog-content">
-                        <div class="title-blog">
-                            <h3>Fusce in augue non nisi fringilla</h3>
-                            <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+
+            <div class="col-lg-3 col-md-6 ">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+                        <div class="type-lb">
+                            <p class="sale">Sale</p>
                         </div>
-                        <ul class="option-blog">
-                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Likes"><i class="far fa-heart"></i></a></li>
-                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Views"><i class="fas fa-eye"></i></a></li>
-                            <li><a href="#" data-toggle="tooltip" data-placement="right" title="Comments"><i class="far fa-comments"></i></a></li>
-                        </ul>
+                        <img src="images/img-pro-03.jpg" class="img-fluid" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                            </ul>
+                            <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5> $10.79</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6  ">
+                <div class="products-single fix">
+                    <div class="box-img-hover">
+                        <div class="type-lb">
+                            <p class="sale">Sale</p>
+                        </div>
+                        <img src="images/img-pro-04.jpg" class="img-fluid" alt="Image">
+                        <div class="mask-icon">
+                            <ul>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Compare"><i class="fas fa-sync-alt"></i></a></li>
+                                <li><a href="#" data-toggle="tooltip" data-placement="right" title="Add to Wishlist"><i class="far fa-heart"></i></a></li>
+                            </ul>
+                            <a class="cart" href="#">Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="why-text">
+                        <h4>Lorem ipsum dolor sit amet</h4>
+                        <h5> $15.79</h5>
                     </div>
                 </div>
             </div>

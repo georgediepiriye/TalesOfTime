@@ -146,12 +146,12 @@
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow-down" data-toggle="dropdown">Brands</a>
                             <ul class="dropdown-menu">
-                                <li><a href="cart.html">Rolex</a></li>
-                                <li><a href="checkout.html">Angela Bos</a></li>
-                                <li><a href="my-account.html">Baogela</a></li>
-                                <li><a href="wishlist.html">Fngeen</a></li>
-                                <li><a href="shop-detail.html">Michael Kors</a></li>
-                                <li><a href="shop-detail.html">Skone</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'rolex']) }}">Rolex</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'angela-bos']) }}">Angela Bos</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'baogela']) }}">Baogela</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'fngeen']) }}">Fngeen</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'michael-kors']) }}">Michael Kors</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'skone']) }}">Skone</a></li>
                             </ul>
                         </li>
                        

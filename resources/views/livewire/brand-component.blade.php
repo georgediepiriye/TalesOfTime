@@ -3,10 +3,11 @@
        <div class="container">
            <div class="row">
                <div class="col-lg-12">
-                   <h2>Shop</h2>
+                   <h2>{{Str::ucfirst($brand_name) }}</h2>
                    <ul class="breadcrumb">
-                       <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-                       <li class="breadcrumb-item active">Shop</li>
+                       <li class="breadcrumb-item"><a href="/">Home</a></li>
+                       <li class="breadcrumb-item active">Product Brand</li>
+                       <li class="breadcrumb-item active">{{Str::ucfirst($brand_name) }}</li>
                    </ul>
                </div>
            </div>
@@ -19,7 +20,7 @@
        <div class="container">
            <div class="row">
                <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
-                   <div class="product-categories">
+                   <div class="product-categori">
                        <div class="search-product">
                            <form action="#">
                                <input class="form-control" placeholder="Search here..." type="text">
@@ -31,8 +32,6 @@
                                <h3>Brands</h3>
                            </div>
                            <div class="list-group list-group-collapse list-group-sm list-group-tree" id="list-group-men" data-children=".sub-men">
-                            
-   
                                @foreach ($brands as $brand)
                                    <a class="list-group-item list-group-item-action" href="{{ route('products.brand',['brand_slug'=>$brand->slug]) }}">{{ Str::ucfirst($brand->name)}}</a>   
                                @endforeach
@@ -42,8 +41,7 @@
                                
                                 
                        </div>
-                 
-                      
+                     
    
                    </div>
                </div>
@@ -75,7 +73,6 @@
                            <div class="tab-content">
                                <div role="tabpanel" class="tab-pane fade show active" id="grid-view">
                                    <div class="row">
-                                       
                                        @foreach ($products as $product)
                                     
                                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-4">
@@ -89,15 +86,13 @@
                                                        <ul>
                                                            <li><a href="" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                                           
-                                                          
                                                        </ul>
                                                        <a class="cart" href="#">Add to Cart</a>
-   
                                                    </div>
                                                </div>
                                                <div class="why-text">
                                                    <h4>{{ $product->name }}</h4>
-                                                   <h5> ₦{{ number_format($product->price) }}</h5>
+                                                   <h5><b> ₦{{ number_format($product->price) }}</b></h5>
                                                </div>
                                            </div>
                                        </div>

@@ -1027,7 +1027,7 @@
 /*------------------------------------------------------------------ Instagram Feed -------------------------------------------------------------------*/
  .instagram-box{
      padding: 70px 0px;
-     background: url(../images/banner-03.jpg) no-repeat center center;
+     background: url(../images/banner-1.jpg) no-repeat center center;
      background-size: auto auto;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -1294,7 +1294,7 @@
 }
 /*------------------------------------------------------------------ All Pages -------------------------------------------------------------------*/
  .all-title-box{
-     background: url("../images/banner-02.jpg") no-repeat center center;
+     background: url("../images/banner-.jpg") no-repeat center center;
      -webkit-background-size: cover;
      -moz-background-size: cover;
      -ms-background-size: cover;

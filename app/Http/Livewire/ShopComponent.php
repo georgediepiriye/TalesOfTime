@@ -25,9 +25,9 @@ class ShopComponent extends Component{
         if($this->sorting==='date'){
             $products = Product::orderBy('created_at','DESC')->paginate(12);
         }elseif($this->sorting==='price'){
-            $products = Product::orderBy('regular_price','ASC')->paginate(12);
+            $products = Product::orderBy('price','ASC')->paginate(12);
         }elseif($this->sorting==='price_desc'){
-            $products = Product::orderBy('regular_price','DESC')->paginate(12);
+            $products = Product::orderBy('price','DESC')->paginate(12);
         }else{
             $products = Product::Paginate(12);
         }
