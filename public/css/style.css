@@ -266,8 +266,7 @@
  .our-link ul li:last-child{
      border: none;
 }
- .main-header{
-}
+
  .search a{
      color: #d33b33;
 }
@@ -621,8 +620,7 @@
      transform: scaleY(1);
      color: #ffffff;
 }
- .hvr-hover{
-}
+
  ul.cart-list > li.total > .btn:hover{
      color: #ffffff;
 }
@@ -827,8 +825,15 @@
  .filter-button-group button.active{
      background: #010101;
 }
- .filter-button-group button{
+
+.account-dropdown{
+    color: #010101 !important;
 }
+.account-dropdown:hover{
+    color: #d33b33 !important;
+
+}
+
  .products-single {
      overflow: hidden;
      position: relative;
@@ -1169,8 +1174,7 @@
      color: #d33b33;
      border-color: #d33b33;
 }
- .footer-link{
-}
+
  .footer-link h4{
      color: #ffffff;
      font-size: 16px;
@@ -1859,7 +1863,7 @@
     box-shadow: none;
     color: #fff;
     display: inline-block;
-    float: right;
+   
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
@@ -2009,8 +2013,7 @@
  .service-icon i{
      font-size: 34px;
 }
- .my-account-page a:hover i{
-}
+
  .service-desc p{
      font-size: 16px;
 }

@@ -1,28 +1,3 @@
-{{-- <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-
-        <title>{{ config('app.name', 'Laravel') }}</title>
-
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-
-        <!-- Scripts -->
-        <script src="{{ mix('js/app.js') }}" defer></script>
-    </head>
-    <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
-        </div>
-    </body>
-</html> --}}
-
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
@@ -35,13 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>TalesofTime</title>
+    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="{{ asset('images/favicon.icon') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{ asset('images/apple-touch-icon.png') }}">
 
     <!-- Bootstrap CSS -->
@@ -99,26 +74,42 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="custom-select-box">
-                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-						<option>¥ JPY</option>
-						<option>$ USD</option>
-						<option>€ EUR</option>
-					</select>
                     
-                    </div>
                    
-                    <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +2348066738338</a></p>
-                    </div>
+          
                     <div class="our-link">
                         <ul>
                             
                             @if (Auth::user())
-                              <li><a href="#">Logout</a></li>
+                                <div class="custom-select-box">
+                                    
+                                    <li class="dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">{{ Auth::user()->name }}</a>
+                                       
+                                       
+                                            <ul class="dropdown-menu">
+                                                @if (Hash::check('admin12345', Auth::user()->password))
+                                                    <li><a class="account-dropdown" href="{{ route('admin.brands') }}">Brands</a></li>
+                                                    <li><a class="account-dropdown"  href="{{ route('admin.products') }}">Products</a></li>
+                                                  
+                                                @endif
+                                                <form id="logout-form" method="post" action="{{ route('logout') }}">
+                                                    @csrf
+                                                </form>   
+                                              <li><a class="account-dropdown" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                            </ul>
+                                            
+                                       
+                                        
+                                    </li>
+                                
+                                   
+                        
+                                </div>
+                                
                             @else 
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Register</a></li>
+                                <li><a href="{{ route('login') }}">Login</a></li>
+                                <li><a href="{{ route('register') }}">Register</a></li>
                             @endif
                            
                            
@@ -152,7 +143,7 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('shop') }}">Shop</a></li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Brands</a>
+                            <a href="#" class="nav-link dropdown-toggle arrow-down" data-toggle="dropdown">Brands</a>
                             <ul class="dropdown-menu">
                                 <li><a href="cart.html">Cart</a></li>
                                 <li><a href="checkout.html">Checkout</a></li>
@@ -185,7 +176,10 @@
         </nav>
         <!-- End Navigation -->
     </header>
-{{ $slot }}
+    <!-- End Main Top -->
+
+    {{ $slot }}
+
    
 
     <!-- Start Instagram Feed  -->

@@ -9,7 +9,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-md-6">
-                                <h3><b>Add New Product</b></h3>
+                                <h3><b>Edit Product</b></h3>
 
                             </div>
                             <div class="col-md-6" style="text-align: right;">
@@ -28,12 +28,12 @@
                             </div>
                             
                         @endif
-                        <form class="form-horizontal" action="{{  route('add_an_item')}}"  method="POST" enctype="multipart/form-data">
+                        <form class="form-horizontal" action="{{  route('update',['product_id'=>$product->id])}}"  method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group row">
                                 <label class="col-md-4">Product Name</label>
                                 <div class="col-md-4">
-                                    <input type="text" name="name" placeholder="Product Name" class="form-control input-md" >
+                                    <input type="text" name="name" value="{{ $product->name }}" placeholder="Product Name" class="form-control input-md" >
                                     @error('name')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -45,7 +45,7 @@
                             <div class="form-group row">
                                 <label class="col-md-4"> Description</label>
                                 <div class="col-md-4">
-                                    <textarea placeholder="Description" name="description" class="form-control input-md" ></textarea>
+                                    <textarea placeholder="Description" value="{{ $product->description }}" name="description" class="form-control input-md" ></textarea>
                                     @error('description')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -55,7 +55,7 @@
                             <div class="form-group row">
                                 <label class="col-md-4"> Price:</label>
                                 <div class="col-md-4">
-                                    <input type="text" name="price" placeholder="Price" class="form-control input-md" >
+                                    <input type="text" value="{{ $product->price }}" name="price" placeholder="Price" class="form-control input-md" >
                                     @error('price')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -67,7 +67,7 @@
                             <div class="form-group row">
                                 <label class="col-md-4">Stock status</label>
                                 <div class="col-md-4">
-                                    <select class="form-control" name="stock_status" >
+                                    <select class="form-control" value="{{ $product->stock_status }}" name="stock_status" >
                                         <option value="instock">Instock</option>
                                         <option value="outofstock">Out of Stock</option>
 
@@ -81,7 +81,7 @@
                             <div class="form-group row">
                                 <label class="col-md-4"> Featured</label>
                                 <div class="col-md-4">
-                                    <select class="form-control" name="featured">
+                                    <select class="form-control" value="{{ $product->featured }}" name="featured">
                                         <option value=0>No</option>
                                         <option value=1>Yes</option>
 
@@ -93,7 +93,7 @@
                             <div class="form-group row">
                                 <label class="col-md-4">Quantiy</label>
                                 <div class="col-md-4">
-                                    <input type="text" name="quantity" placeholder="Quantity" class="form-control input-md" >
+                                    <input type="text" value="{{ $product->quantity }}" name="quantity" placeholder="Quantity" class="form-control input-md" >
                                     @error('quantity')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -103,7 +103,7 @@
                             <div class="form-group row">
                                 <label class="col-md-4">Product First Image</label>
                                 <div class="col-md-4">
-                                    <input type="file" class="input-file" name="image1">
+                                    <input type="file" value="{{ $product->image1 }}" class="input-file" name="image1">
                                     @error('image1')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -114,7 +114,7 @@
                             <div class="form-group row">
                                 <label class="col-md-4">Product Second Image</label>
                                 <div class="col-md-4">
-                                    <input type="file" class="input-file" name="image2">
+                                    <input type="file" value="{{ $product->image2 }}" class="input-file" name="image2">
                                     @error('image2')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -125,7 +125,7 @@
                             <div class="form-group row">
                                 <label class="col-md-4">Product Third Image</label>
                                 <div class="col-md-4">
-                                    <input type="file" class="input-file" name="image3">
+                                    <input type="file" value="{{ $product->image3 }}" class="input-file" name="image3">
                                     @error('image3')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
@@ -136,7 +136,7 @@
                             <div class="form-group row">
                                 <label class="col-md-4">Brand</label>
                                 <div class="col-md-4">
-                                    <select class="form-control" name="brand_id">
+                                    <select class="form-control" value="{{ $product->brand_id }}" name="brand_id">
                                         <option value="">Select Brand</option>
                                         @foreach ($brands as $brand)
                                             <option value="{{ $brand->id }}">{{Str::ucfirst($brand->name ) }}</option>
@@ -154,7 +154,7 @@
                             <div class="form-group row" >
                                 <label class="col-md-4"></label>
                                 <div class="col-md-4">
-                                   <button type="submit" class="btn btn-primary">Submit</button>
+                                   <button type="submit" class="btn btn-primary">Update</button>
                                 </div>
                             </div>
 

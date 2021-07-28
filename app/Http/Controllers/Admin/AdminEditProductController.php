@@ -9,10 +9,10 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
-class AdminAddProductController extends Controller
+class AdminEditProductController extends Controller
 {
     //
-    public function addItem(Request $request){
+    public function addItem(Request $request,$product_id){
   
 
 
@@ -30,7 +30,7 @@ class AdminAddProductController extends Controller
     
         ]);
     
-        $product = new Product();
+        $product = Product::find($product_id);
         $product->name = $request->name;
         $product->slug = Str::slug($request->name);
         $product->description = $request->description;
@@ -54,15 +54,17 @@ class AdminAddProductController extends Controller
         $product->brand_id = $request->brand_id;
   
         $product->save();
-        session()->flash('message','Your new item added Successfully!');
+        session()->flash('message','Your Product has been updated Successfully!');
         return redirect()->route('admin.products');
     
     }
 
-    public function index(){
+    public function index($product_id){
+        $product = Product::find($product_id);
         $brands = Brand::all();
-        return view('livewire.admin.admin-add-product',[
-            'brands'=> $brands
+        return view('livewire.admin.admin-edit-product',[
+            'brands'=> $brands,
+            'product'=> $product
         ]);
     }
 }

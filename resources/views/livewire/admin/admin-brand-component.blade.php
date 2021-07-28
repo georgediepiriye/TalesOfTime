@@ -48,7 +48,7 @@
                                     <tr>
                                     
                                         <td>{{ $brand->id }}</td>
-                                        <td>{{ $brand->name}}</td>
+                                        <td>{{Str::ucfirst($brand->name) }}</td>
                                         <td>{{ $brand->slug }}</td>
                                         <td>
                                             <a href="{{ route('admin.editbrand',['brand_slug'=>$brand->slug]) }}"> <i  class="fa fa-edit fa-2x"></i></a>

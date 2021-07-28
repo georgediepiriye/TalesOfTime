@@ -74,26 +74,42 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="custom-select-box">
-                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-						<option>¥ JPY</option>
-						<option>$ USD</option>
-						<option>€ EUR</option>
-					</select>
                     
-                    </div>
                    
-                    <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +2348066738338</a></p>
-                    </div>
+          
                     <div class="our-link">
                         <ul>
                             
                             @if (Auth::user())
-                              <li><a href="#">Logout</a></li>
+                                <div class="custom-select-box">
+                                    
+                                    <li class="dropdown">
+                                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">{{ Auth::user()->name }}</a>
+                                       
+                                       
+                                            <ul class="dropdown-menu">
+                                                @if (Hash::check('admin12345', Auth::user()->password))
+                                                    <li><a class="account-dropdown" href="{{ route('admin.brands') }}">Brands</a></li>
+                                                    <li><a class="account-dropdown"  href="{{ route('admin.products') }}">Products</a></li>
+                                                  
+                                                @endif
+                                                <form id="logout-form" method="post" action="{{ route('logout') }}">
+                                                    @csrf
+                                                </form>   
+                                              <li><a class="account-dropdown" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                                            </ul>
+                                            
+                                       
+                                        
+                                    </li>
+                                
+                                   
+                        
+                                </div>
+                                
                             @else 
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Register</a></li>
+                                <li><a href="{{ route('login') }}">Login</a></li>
+                                <li><a href="{{ route('register') }}">Register</a></li>
                             @endif
                            
                            
@@ -127,14 +143,14 @@
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('shop') }}">Shop</a></li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Brands</a>
+                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Brands</a>
                             <ul class="dropdown-menu">
-                                <li><a href="cart.html">Cart</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
-                                <li><a href="shop-detail.html">Shop Detail</a></li>
-                                <li><a href="shop-detail.html">Shop Detail</a></li>
+                                <li><a href="cart.html">Rolex</a></li>
+                                <li><a href="checkout.html">Angela Bos</a></li>
+                                <li><a href="my-account.html">Baogela</a></li>
+                                <li><a href="wishlist.html">Fngeen</a></li>
+                                <li><a href="shop-detail.html">Michael Kors</a></li>
+                                <li><a href="shop-detail.html">Skone</a></li>
                             </ul>
                         </li>
                        
