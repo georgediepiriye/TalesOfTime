@@ -141,7 +141,7 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('aboutus') }}">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('shop') }}">Shop</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow-down" data-toggle="dropdown">Brands</a>
@@ -164,7 +164,7 @@
                 <div class="attr-nav">
                     <ul>
                        
-                        <li class="side-menu"><a href="#">
+                        <li class="side-menu"><a href="{{ route('cart') }}">
                          <span ><b style="font-size: 16px !important;">Cart</b></span>   
 						<i class="fa fa-shopping-bag"></i>
                             <span class="badge">3</span>

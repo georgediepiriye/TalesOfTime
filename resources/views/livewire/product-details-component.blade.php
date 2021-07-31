@@ -47,7 +47,7 @@
                     <div class="single-product-details">
                         <h2>{{Str::ucfirst($product->name)  }}</h2>
                         <h5>₦{{ number_format($product->price) }}</h5>
-                        <p class="available-stock"><span>{{ $product->stock_status }}</span>
+                        <p class="available-stock"><span>{{Str::ucfirst($product->stock_status)  }}</span>
                             <p>
                                 <h4>Short Description:</h4>
                                 <p>{{ $product->description }} </p>
@@ -56,7 +56,7 @@
                                 <div class="price-box-bar">
                                     <div class="cart-and-bay-btn">
                                 
-                                        <a class="btn hvr-hover" data-fancybox-close="" href="#">Add to cart</a>
+                                        <a class="btn hvr-hover" wire:click.prevent="store({{ $product->id}},'{{ $product->name }}',{{ $product->price }})">Add to cart</a>
                                     </div>
                                 </div>
 

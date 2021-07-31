@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminAddProductController;
 use App\Http\Controllers\Admin\AdminEditProductController;
+use App\Http\Livewire\AboutusComponent;
 use App\Http\Livewire\Admin\AdminAddBrandComponent;
 use App\Http\Livewire\Admin\AdminBrandComponent;
 use App\Http\Livewire\Admin\AdminEditBrandComponent;
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\BrandComponent;
+use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\ProductDetailsComponent;
 
 /*
@@ -27,6 +29,8 @@ use App\Http\Livewire\ProductDetailsComponent;
 
 Route::get('/',HomeComponent::class)->name('home');
 Route::get('/shop',ShopComponent::class)->name('shop');
+Route::get('/about_us',AboutusComponent::class)->name('aboutus');
+Route::get('/cart',CartComponent::class)->name('cart');
 Route::get('/products/brand/{brand_slug}',BrandComponent::class)->name('products.brand');
 Route::get('/product/{product_slug}',ProductDetailsComponent::class)->name('product.details');
   
