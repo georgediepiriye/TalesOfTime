@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Cart;
 
 
 class ShopComponent extends Component{  
@@ -15,6 +16,14 @@ class ShopComponent extends Component{
         $this->sorting = 'default';
     }
   
+    //function to store product in cart
+    public function store($product_id,$product_name,$product_price){
+        
+        Cart::instance('cart')->add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
+        session()->flash('message','Product added to Cart!');
+        return redirect()->route('cart');
+
+    }
 
 
 
