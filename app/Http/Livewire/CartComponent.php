@@ -14,6 +14,7 @@ class CartComponent extends Component
         $product = Cart::get($rowId);
         $qty = $product->qty + 1;
         Cart::update($rowId,$qty);
+        $this->emitTo('cart-count-component','refreshComponent');
        
     }
 
@@ -22,6 +23,7 @@ class CartComponent extends Component
         $product = Cart::get($rowId);
         $qty = $product->qty - 1;
         Cart::update($rowId,$qty);
+        $this->emitTo('cart-count-component','refreshComponent');
    
     }
 
@@ -29,12 +31,13 @@ class CartComponent extends Component
     public function removeItem($rowId){
         Cart::remove($rowId);
         session()->flash('message','Item has been deleted!');
+        $this->emitTo('cart-count-component','refreshComponent');
 
     }
 
     //function to clear all cart items
     public function clearCart(){
-        Cart::instance('cart')->destroy();
+        Cart::destroy();
         $this->emitTo('cart-count-component','refreshComponent');
         session()->flash('message','All items removed Successfully!');
     }

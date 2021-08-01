@@ -158,22 +158,9 @@
                         <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
-
-                <!-- Start Atribute Navigation -->
-                <div class="attr-nav">
-                    <ul>
-                       
-                        <li class="side-menu"><a href="{{ route('product.cart') }}">
-                         <span ><b style="font-size: 16px !important;">Cart</b></span>   
-						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge">@if (Cart::count()>0)
-                                {{ Cart::count() }}
-                            @endif</span>
-					</a></li>
-                    </ul>
-                </div>
-                <!-- End Atribute Navigation -->
+  
+             @livewire('cart-count-component')
+       
             </div>
       
         </nav>
