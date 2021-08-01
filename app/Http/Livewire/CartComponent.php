@@ -28,7 +28,6 @@ class CartComponent extends Component
     //function to remove single item from cart
     public function removeItem($rowId){
         Cart::remove($rowId);
-        $this->emitTo('cart-count-component','refreshComponent');
         session()->flash('message','Item has been deleted!');
 
     }
