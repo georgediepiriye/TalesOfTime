@@ -15,15 +15,13 @@ class ShopComponent extends Component{
     public function mount(){
         $this->sorting = 'default';
     }
-  
-    //function to store product in cart
-    public function store($product_id,$product_name,$product_price){
-        
-        Cart::instance('cart')->add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
-        session()->flash('message','Product added to Cart!');
-        return redirect()->route('cart');
 
-    }
+  //function to store product in cart
+  public function store($product_id,$product_name,$product_price){
+    Cart::add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
+    session()->flash('message','Product added Successfully!');
+    return redirect()->route('product.cart');
+}
 
 
 

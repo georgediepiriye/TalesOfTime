@@ -30,7 +30,7 @@ use App\Http\Livewire\ProductDetailsComponent;
 Route::get('/',HomeComponent::class)->name('home');
 Route::get('/shop',ShopComponent::class)->name('shop');
 Route::get('/about_us',AboutusComponent::class)->name('aboutus');
-Route::get('/cart',CartComponent::class)->name('cart');
+Route::get('/cart',CartComponent::class)->name('product.cart');
 Route::get('/products/brand/{brand_slug}',BrandComponent::class)->name('products.brand');
 Route::get('/product/{product_slug}',ProductDetailsComponent::class)->name('product.details');
   

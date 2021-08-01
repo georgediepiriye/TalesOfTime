@@ -12,7 +12,7 @@
                        
                    @endif
    
-                   @if (Cart::instance('cart')->count() > 0)
+                   @if (Cart::count() > 0)
                        <div class="table-main table-responsive">
                            <table class="table">
                                <thead>
@@ -26,34 +26,36 @@
                                    </tr>
                                </thead>
                                <tbody>
-                                   @foreach (Cart::instance('cart')->content() as $item )
-                                       <tr>
-                                           <td class="thumbnail-img">
-                                               <a href="{{ route('product.details',['slug'=>$item->model->slug]) }}">
-                                                   <img class="img-fluid" src="{{ $item->model->image1 }}" alt="" />
-                                               </a>
-                                           </td>
-                                           <td class="name-pr">
-                                               <a href="{{ route('product.details',['slug'=>$item->model->slug]) }}">
-                                                    {{Str::ucfirst($item->model->name ) }}
-                                               </a>
-                                           </td>
-                                           <td class="price-pr">
-                                               <p>₦{{ number_format($item->model->price) }}</p>
-                                           </td>
-                                           <td class="quantity-box">
-                                               <a href="" class="btn btn-reduce" wire:click.prevent="decreaseQuantity('{{ $item->rowId }}')">-</a>
-                                               <input type="text" value="{{ $item->qty }}" data-max='120' pattern="[0-9">
-                                               <a href="" class="btn btn-increase" wire:click.prevent="increaseQuantity('{{ $item->rowId }}')">+</a>
-                                              
-                                           </td>
-                                           <td class="total-pr">
-                                               <p>₦{{ number_format($item->subtotal)  }}</p>
-                                           </td>
-                                           <td class="remove-pr">
-                                               <a href="#"><i class="fas fa-times" wire:click.prevent="removeItem('{{ $item->rowId }}')"></i> </a>
-                                           </td>
-                                       </tr>
+                                   
+                                   @foreach (Cart::content() as $item )
+                                  
+                                   <tr>
+                                    <td class="thumbnail-img">
+                                        <a href="{{ route('product.details',['product_slug'=>$item->model->slug]) }}">
+                                            <img class="img-fluid" src="{{ $item->model->image1 }}" alt="" />
+                                        </a>
+                                    </td>
+                                    <td class="name-pr">
+                                        <a href="{{ route('product.details',['product_slug'=>$item->model->slug]) }}">
+                                             {{Str::ucfirst($item->model->name ) }}
+                                        </a>
+                                    </td>
+                                    <td class="price-pr">
+                                        <p>₦{{ number_format($item->model->price) }}</p>
+                                    </td>
+                                    <td class="quantity-box">
+                                        <a href="" class="btn btn-reduce" wire:click.prevent="decreaseQuantity('{{ $item->rowId }}')">-</a>
+                                        <input type="text" value="{{ $item->qty }}" data-max='120' pattern="[0-9">
+                                        <a href="" class="btn btn-increase" wire:click.prevent="increaseQuantity('{{ $item->rowId }}')">+</a>
+                                       
+                                    </td>
+                                    <td class="total-pr">
+                                        <p style="margin-left: 20px">₦{{ number_format($item->subtotal)  }}</p>
+                                    </td>
+                                    <td class="remove-pr">
+                                        <a href="#"><i class="fas fa-times" wire:click.prevent="removeItem('{{ $item->rowId }}')"></i> </a>
+                                    </td>
+                                </tr>
                                        
                                    @endforeach
                                    
@@ -98,14 +100,14 @@
                        <h3>Order summary</h3>
                        <div class="d-flex">
                            <h4>Sub Total</h4>
-                           <div class="ml-auto font-weight-bold">₦{{ Cart::instance('cart')->subtotal() }} </div>
+                           <div class="ml-auto font-weight-bold">₦{{ Cart::subtotal() }} </div>
                        </div>
                        
                        <hr class="my-1">
              
                        <div class="d-flex">
                            <h4>Tax</h4>
-                           <div class="ml-auto font-weight-bold"> ₦{{ Cart::instance('cart')->tax() }}</div>
+                           <div class="ml-auto font-weight-bold"> ₦{{ Cart::tax() }}</div>
                        </div>
                        <div class="d-flex">
                            <h4>Delivery Cost</h4>
@@ -114,7 +116,7 @@
                        <hr>
                        <div class="d-flex gr-total">
                            <h5>Grand Total</h5>
-                           <div class="ml-auto h5"> ₦ {{Cart::instance('cart')->total()}} </div>
+                           <div class="ml-auto h5"> ₦ {{Cart::total()}} </div>
                        </div>
                        <hr> </div>
                </div>

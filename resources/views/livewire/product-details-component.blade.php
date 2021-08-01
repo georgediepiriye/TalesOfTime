@@ -1,17 +1,4 @@
 
-    <div class="all-title-box">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2>Product Detail</h2>
-                 
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End All Title Box -->
-
-    <!-- Start Shop Detail  -->
     <div class="shop-detail-box-main">
         <div class="container">
             <div class="row">
@@ -54,10 +41,10 @@
                       
 
                                 <div class="price-box-bar">
-                                    <div class="cart-and-bay-btn">
+                                    
                                 
-                                        <a class="btn hvr-hover" wire:click.prevent="store({{ $product->id}},'{{ $product->name }}',{{ $product->price }})">Add to cart</a>
-                                    </div>
+                                    <a class="btn hvr-hover" href="#" style="color:white" wire:click.prevent='store({{ $product->id }},"{{ $product->name }}",{{ $product->price }})'>Add to cart</a>
+                                 
                                 </div>
 
                                 <div class="add-to-btn">
