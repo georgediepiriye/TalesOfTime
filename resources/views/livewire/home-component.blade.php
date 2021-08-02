@@ -115,7 +115,7 @@
         </div>
 
         <div class="row special-list">
-            @for ($best_seller_products as $best_seller_product)
+            @foreach ($best_seller_products as $best_seller_product)
                 <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
@@ -139,9 +139,9 @@
                 </div>
 
                 
-            @endfor
+            @endforeach
            
-            @for ($featured_product as $featured_product)
+            @foreach ($featured_product as $featured_product)
                 <div class="col-lg-3 col-md-6 special-grid top-featured">
                     <div class="products-single fix">
                         <div class="box-img-hover">
@@ -164,7 +164,7 @@
                     </div>
                 </div>
                     
-            @endfor
+            @endforeach
            
 
     
