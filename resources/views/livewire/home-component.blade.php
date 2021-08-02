@@ -141,7 +141,7 @@
                 
             @endforeach
            
-            @foreach ($featured_product as $featured_product)
+            @foreach ($featured_products as $featured_product)
                 <div class="col-lg-3 col-md-6 special-grid top-featured">
                     <div class="products-single fix">
                         <div class="box-img-hover">
