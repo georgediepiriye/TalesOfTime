@@ -12,7 +12,7 @@ use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 class AdminEditProductController extends Controller
 {
     //
-    public function addItem(Request $request,$product_id){
+    public function update(Request $request,$product_id){
   
 
 
