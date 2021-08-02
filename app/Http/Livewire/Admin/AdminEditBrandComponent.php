@@ -45,6 +45,6 @@ public function generateSlug(){
     public function render()
     {
         
-        return view('livewire.admin.admin-edit-brand-component')->layout('layouts.base');
+        return view('livewire.admin.admin-edit-brand-component')->layout('layouts.guest');
     }
 }
