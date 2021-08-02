@@ -143,20 +143,21 @@
                         <li class="nav-item"><a class="nav-link" href="{{ route('aboutus') }}">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('shop') }}">Shop</a></li>
                         <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Brands</a>
+                            <a href="#" class="nav-link dropdown-toggle arrow-down" data-toggle="dropdown">Brands</a>
                             <ul class="dropdown-menu">
-                                <li><a href="cart.html">Rolex</a></li>
-                                <li><a href="checkout.html">Angela Bos</a></li>
-                                <li><a href="my-account.html">Baogela</a></li>
-                                <li><a href="wishlist.html">Fngeen</a></li>
-                                <li><a href="shop-detail.html">Michael Kors</a></li>
-                                <li><a href="shop-detail.html">Skone</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'rolex']) }}">Rolex</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'angela-bos']) }}">Angela Bos</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'baogela']) }}">Baogela</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'fngeen']) }}">Fngeen</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'michael-kors']) }}">Michael Kors</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'skone']) }}">Skone</a></li>
                             </ul>
                         </li>
                        
                         <li class="nav-item"><a class="nav-link" href="{{ route('contactus') }}">Contact Us</a></li>
                     </ul>
                 </div>
+  
                 <!-- /.navbar-collapse -->
 
     
@@ -176,7 +177,7 @@
         <div class="main-instagram owl-carousel owl-theme">
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-01.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta1.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -184,7 +185,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-02.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta2.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -192,7 +193,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-03.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta3.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -200,7 +201,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-04.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta4.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -208,7 +209,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-05.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta5.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -216,7 +217,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-06.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta6.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -224,7 +225,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-07.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta7.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -232,7 +233,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-08.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta8.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -240,7 +241,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-09.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta9.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
@@ -248,7 +249,7 @@
             </div>
             <div class="item">
                 <div class="ins-inner-box">
-                    <img src="{{ asset('images/instagram-img-05.jpg') }}" alt="" />
+                    <img src="{{ asset('images/insta10.jpg') }}" alt="" />
                     <div class="hov-in">
                         <a href="#"><i class="fab fa-instagram"></i></a>
                     </div>
