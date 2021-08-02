@@ -102,7 +102,7 @@
                 </div>
             </div>
         </div>
-   
+        <div class="row">
             @foreach ($featured_products as $featured_product)
                 <div class="col-lg-3 col-md-6 special-grid top-featured">
                     <div class="products-single fix">
@@ -146,7 +146,7 @@
                 </div>
             </div>
         </div>
-        <div class="row ">
+        <div class="row">
             @foreach ($latest_products as $latest_product )
                 <div class="col-lg-3 col-md-6 ">
                     <div class="products-single fix">
