@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Product;
 use Livewire\Component;
+use Livewire\WithPagination;
 use Cart;
 
 class HomeComponent extends Component
@@ -17,7 +18,7 @@ class HomeComponent extends Component
   }
 
 
-
+  use WithPagination;
     public function render()
     {
       
