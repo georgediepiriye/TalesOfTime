@@ -41,6 +41,6 @@ class BrandComponent extends Component{
 
 
         
-        return view('livewire.brand-component',['products'=>$products,'brands'=>$brands,'brand_name'=>$brand_name])->layout('layouts.guest');
+        return view('livewire.brand-component',['products'=>$products,'brands'=>$brands,'brand_name'=>$brand_name])->layout('layouts.base');
     }
 }
