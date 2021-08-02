@@ -7,7 +7,7 @@
                     <div class="col-md-12">
                         <h1 class="m-b-20"><strong>Welcome To <br> TalesofTime</strong></h1>
                         <p class="m-b-40">Style Created with Time...</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <p><a class="btn hvr-hover" href="{{ route('shop') }}">Shop Now</a></p>
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <div class="col-md-12">
                         <h1 class="m-b-20"><strong>Welcome To <br> TalesofTime</strong></h1>
                         <p class="m-b-40">Style Created with Time...</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <p><a class="btn hvr-hover" href="{{ route('shop') }}">Shop Now</a></p>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <div class="col-md-12">
                         <h1 class="m-b-20"><strong>Welcome To <br> TalesofTime</strong></h1>
                         <p class="m-b-40">Style Created with Time...</p>
-                        <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                        <p><a class="btn hvr-hover" href="{{ route('shop') }}">Shop Now</a></p>
                     </div>
                 </div>
             </div>
@@ -106,8 +106,8 @@
             <div class="col-lg-12">
                 <div class="special-menu text-center">
                     <div class="button-group filter-button-group">
-                        <button class="active" data-filter="*">All</button>
-                        <button data-filter=".top-featured">Top featured</button>
+                  
+                        <button class="active" data-filter=".top-featured">Top featured</button>
                         <button data-filter=".best-seller">Best seller</button>
                     </div>
                 </div>
