@@ -155,7 +155,7 @@
                             </ul>
                         </li>
                        
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('contactus') }}">Contact Us</a></li>
                     </ul>
                 </div>
   

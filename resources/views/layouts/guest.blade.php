@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
+    <title>TalesofTime</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -33,6 +33,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+@livewireStyles()
 </head>
 
 <body>
@@ -140,37 +141,26 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('aboutus') }}">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('shop') }}">Shop</a></li>
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow-down" data-toggle="dropdown">Brands</a>
                             <ul class="dropdown-menu">
-                                <li><a href="cart.html">Cart</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="my-account.html">My Account</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
-                                <li><a href="shop-detail.html">Shop Detail</a></li>
-                                <li><a href="shop-detail.html">Shop Detail</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'rolex']) }}">Rolex</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'angela-bos']) }}">Angela Bos</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'baogela']) }}">Baogela</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'fngeen']) }}">Fngeen</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'michael-kors']) }}">Michael Kors</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'skone']) }}">Skone</a></li>
                             </ul>
                         </li>
                        
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('contactus') }}">Contact Us</a></li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
-
-                <!-- Start Atribute Navigation -->
-                <div class="attr-nav">
-                    <ul>
-                       
-                        <li class="side-menu"><a href="#">
-                         <span ><b style="font-size: 16px !important;">Cart</b></span>   
-						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-					</a></li>
-                    </ul>
-                </div>
-                <!-- End Atribute Navigation -->
+  
+             @livewire('cart-count-component')
+       
             </div>
       
         </nav>
@@ -351,6 +341,7 @@
     <script src="{{ asset('js/form-validator.min.js') }}"></script>
     <script src="{{ asset('js/contact-form-script.js') }}"></script>
     <script src="{{ asset('js/custom.js') }}"></script>
+    @livewireScripts()
 </body>
 
 </html>

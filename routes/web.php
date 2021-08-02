@@ -13,6 +13,7 @@ use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\BrandComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
+use App\Http\Livewire\ContactusComponent;
 use App\Http\Livewire\ProductDetailsComponent;
 use App\Http\Livewire\ThankyouComponent;
 
@@ -36,7 +37,8 @@ Route::get('/cart',CartComponent::class)->name('product.cart');
 Route::get('/products/brand/{brand_slug}',BrandComponent::class)->name('products.brand');
 Route::get('/product/{product_slug}',ProductDetailsComponent::class)->name('product.details');
 Route::get('/checkout',CheckoutComponent::class)->name('checkout')->middleware('auth');
-Route::get('/thankyou',ThankyouComponent::class)->name('thankyou');
+Route::get('/thankyou',ThankyouComponent::class)->name('thankyou')->middleware('auth');
+Route::get('/contact_us',ContactusComponent::class)->name('contactus');
   
 
 //Admin

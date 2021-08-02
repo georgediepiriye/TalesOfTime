@@ -1,5 +1,6 @@
 
-    <div class="all-title-box">
+
+    <div class="about-box-main">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -10,13 +11,6 @@
                     </ul>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- End All Title Box -->
-
-    <!-- Start About Page  -->
-    <div class="about-box-main">
-        <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <h2 class="noo-sh-title">We are <span>TheTalesofTime</span></h2>
