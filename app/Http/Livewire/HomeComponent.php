@@ -11,9 +11,11 @@ class HomeComponent extends Component
     {
         $best_seller_products = Product::all()->random(4);
         $featured_products = Product::where('featured',1)->paginate(4);
+        $latest_products = Product::orderBy('created_at',"DESC")->paginate(4);
         return view('livewire.home-component',[
             'best_seller_products'=>$best_seller_products,
-            'featured_products' =>$featured_products
+            'featured_products' =>$featured_products,
+            'latest_products'=> $latest_products
 
             ])->layout('layouts.base');
     }
