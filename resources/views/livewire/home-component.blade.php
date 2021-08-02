@@ -58,8 +58,8 @@
         <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                 <div class="shop-cat-box">
-                    <img class="img-fluid" src="{{ asset('images/rol1.jpg') }}" alt="" />
-                    <a class="btn hvr-hover" href="{{ route('products.brand',['brand_slug'=>'rolex']) }}">Rolex</a>
+                    <img class="img-fluid" src="{{ asset('images/gen1.jpg') }}" alt="" />
+                    <a class="btn hvr-hover" href="{{ route('products.brand',['brand_slug'=>'geneva']) }}">Geneva</a>
                 </div>
                 <div class="shop-cat-box">
                     <img class="img-fluid" src="{{ asset('images/ab1.jpg') }}" alt="" />

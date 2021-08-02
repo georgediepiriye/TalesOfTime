@@ -147,7 +147,7 @@
                         <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow-down" data-toggle="dropdown">Brands</a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('products.brand',['brand_slug'=>'rolex']) }}">Rolex</a></li>
+                                <li><a href="{{ route('products.brand',['brand_slug'=>'geneva']) }}">Geneva</a></li>
                                 <li><a href="{{ route('products.brand',['brand_slug'=>'angela-bos']) }}">Angela Bos</a></li>
                                 <li><a href="{{ route('products.brand',['brand_slug'=>'baogela']) }}">Baogela</a></li>
                                 <li><a href="{{ route('products.brand',['brand_slug'=>'fngeen']) }}">Fngeen</a></li>
