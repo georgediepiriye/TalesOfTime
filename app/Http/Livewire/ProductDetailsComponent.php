@@ -30,6 +30,6 @@ class ProductDetailsComponent extends Component
         return view('livewire.product-details-component',[
             'product'=>$product,
             'featured_products'=> $featured_products
-            ])->layout('layouts.base');
+            ])->layout('layouts.guest');
     }
 }
