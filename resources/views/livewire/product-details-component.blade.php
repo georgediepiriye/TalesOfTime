@@ -80,7 +80,7 @@
                                         </div>
                                     </div>
                                     <div class="why-text">
-                                        <h4>{{Str::ucfirst($featured_products->name)  }}</h4>
+                                        <h4>{{Str::ucfirst($featured_product->name)  }}</h4>
                                         <h5>₦{{ number_format($product->price) }}</h5>
                                     </div>
                                 </div>
