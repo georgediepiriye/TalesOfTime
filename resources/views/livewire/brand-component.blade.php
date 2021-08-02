@@ -1,23 +1,18 @@
 <main>
-    <div class="all-title-box">
-       <div class="container">
-           <div class="row">
-               <div class="col-lg-12">
-                   <h2>{{Str::ucfirst($brand_name) }}</h2>
-                   <ul class="breadcrumb">
-                       <li class="breadcrumb-item"><a href="/">Home</a></li>
-                       <li class="breadcrumb-item active">Product Brand</li>
-                       <li class="breadcrumb-item active">{{Str::ucfirst($brand_name) }}</li>
-                   </ul>
-               </div>
-           </div>
-       </div>
-   </div>
-   <!-- End All Title Box -->
+   
    
    <!-- Start Shop Page  -->
    <div class="shop-box-inner">
        <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Home</a></li>
+                    <li class="breadcrumb-item active">Product Brand</li>
+                    <li class="breadcrumb-item active">{{Str::ucfirst($brand_name) }}</li>
+                </ul>
+            </div>
+        </div>
            <div class="row">
                <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
                    <div class="product-categori">

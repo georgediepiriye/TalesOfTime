@@ -1,6 +1,7 @@
 <main>
     <div class="cart-box-main">
        <div class="container">
+        @if (Cart::count() > 0)
            <div class="row">
                <div class="col-lg-12">
                    @if (Session::has('message'))
@@ -12,7 +13,7 @@
                        
                    @endif
    
-                   @if (Cart::count() > 0)
+             
                        <div class="table-main table-responsive">
                            <table class="table">
                                <thead>
@@ -64,9 +65,7 @@
                                </tbody>
                            </table>
                        </div>
-                   @else
-                       <p>No item in Cart</p>
-                   @endif
+                 
                </div>
            </div>
    
@@ -120,9 +119,19 @@
                        </div>
                        <hr> </div>
                </div>
-               <div class="col-12 d-flex shopping-box"><a href="checkout.html" class="ml-auto btn hvr-hover" wire:click.prevent='checkout'>Checkout</a> </div>
+               <div class="col-12 d-flex shopping-box"><a href="#" class="ml-auto btn hvr-hover" wire:click.prevent='checkout'>Checkout</a> </div>
+           </div>
+         @else
+           <div class="row">
+               <div class="col-md-12" style="align-content: center">
+                   <h2>Your Cart is empty!</h2>
+                   <h5>Add item to it</h5>
+                   <a href="{{ route('shop') }}" class="btn btn-success">Shop Now</a>
+   
+               </div>
            </div>
    
+        @endif
        </div>
    </div>
    </main>

@@ -15,7 +15,7 @@ class CreateShippingsTable extends Migration
     {
         Schema::create('shippings', function (Blueprint $table) {
             $table->id();
-            $table->foreign('order_id')->references('id')->on('orders');
+            $table->foreignId('order_id')->references('id')->on('orders');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('mobile');
@@ -25,6 +25,7 @@ class CreateShippingsTable extends Migration
             $table->string('city');
             $table->string('province');
             $table->string('country');
+            $table->string('state');
             $table->string('zipcode');
             $table->timestamps();
            
