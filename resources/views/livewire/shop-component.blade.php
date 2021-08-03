@@ -16,10 +16,10 @@
                <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
                    <div class="product-categories">
                        <div class="search-product">
-                           <form action="#">
-                               <input class="form-control" placeholder="Search here..." type="text">
+            
+                               <input class="form-control" placeholder="Search here..." type="text" wire:model='searchItem'>
                                <button type="submit"> <i class="fa fa-search"></i> </button>
-                           </form>
+                       
                        </div>
                        <div class="filter-sidebar-left">
                            <div class="title-left">

@@ -12,6 +12,7 @@ use Cart;
 class ShopComponent extends Component{  
 
     public $sorting;
+    public $searchItem;
     public function mount(){
         $this->sorting = 'default';
     }
@@ -28,21 +29,24 @@ class ShopComponent extends Component{
     use WithPagination;
     public function render()
     {
-        
+        $searchItem = '%'. $this->searchItem . '%';
         if($this->sorting==='date'){
-            $products = Product::orderBy('created_at','DESC')->paginate(12);
+            $products = Product::where('name','LIKE',$searchItem)->orderBy('created_at','DESC')->paginate(12);
         }elseif($this->sorting==='price'){
-            $products = Product::orderBy('price','ASC')->paginate(12);
+            $products = Product::where('name','LIKE',$searchItem)->orderBy('price','ASC')->paginate(12);
         }elseif($this->sorting==='price_desc'){
-            $products = Product::orderBy('price','DESC')->paginate(12);
+            $products = Product::where('name','LIKE',$searchItem)->orderBy('price','DESC')->paginate(12);
         }else{
-            $products = Product::Paginate(12);
+            $products = Product::where('name','LIKE',$searchItem)->Paginate(12);
         }
 
         $brands = Brand::all();
 
 
         
-        return view('livewire.shop-component',['products'=>$products,'brands'=>$brands])->layout('layouts.base');
+        return view('livewire.shop-component',[
+            'products'=>$products,
+            'brands'=>$brands
+            ])->layout('layouts.base');
     }
 }
