@@ -116,7 +116,7 @@
                                     <li><a href="{{ route('product.details',['product_slug'=>$featured_product->slug]) }}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
 
                                 </ul>
-                                <a class="cart" href="#" wire:click.prevent='store({{ $featured_product->id }},"{{ $featured_product->name }}",{{ $featured_product->price }})'>Add to Cart</a>
+                                <a href="#" class="cart" wire:click.prevent='store({{ $featured_product->id }},"{{ $featured_product->name }}",{{ $featured_product->price }})'>Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
@@ -159,7 +159,7 @@
                                 <ul>
                                     <li><a href="{{ route('product.details',['product_slug'=>$latest_product->slug]) }}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                 </ul>
-                                <a class="cart" href="#" wire:click.prevent='store({{ $latest_product->id }},"{{ $latest_product->name }}",{{ $latest_product->price }})'>Add to Cart</a>
+                                <a href="#" class="cart" wire:click.prevent='store({{ $latest_product->id }},"{{ $latest_product->name }}",{{ $latest_product->price }})'>Add to Cart</a>
                             </div>
                         </div>
                         <div class="why-text">
