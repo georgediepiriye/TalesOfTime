@@ -46,7 +46,7 @@
                                     </td>
                                     <td class="quantity-box">
                                         <a href="" class="btn btn-reduce" wire:click.prevent="decreaseQuantity('{{ $item->rowId }}')">-</a>
-                                        <input type="text" value="{{ $item->qty }}" data-max='120' pattern="[0-9">
+                                        <input type="text" value="{{ $item->qty }}" data-max='120' pattern="[0-9]">
                                         <a href="" class="btn btn-increase" wire:click.prevent="increaseQuantity('{{ $item->rowId }}')">+</a>
                                        
                                     </td>

@@ -1,7 +1,7 @@
 <main>
    
    
-   <!-- Start Shop Page  -->
+
    <div class="shop-box-inner">
        <div class="container">
         <div class="row">
@@ -82,7 +82,7 @@
                                                            <li><a href="{{ route('product.details',['product_slug'=>$product->slug]) }}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                                           
                                                        </ul>
-                                                       <a class="cart" href="#">Add to Cart</a>
+                                                       <a href="#" class="cart" wire:click.prevent='store({{ $product->id }},"{{ $product->name }}",{{ $product->price }})'>Add to Cart</a>
                                                    </div>
                                                </div>
                                                <div class="why-text">

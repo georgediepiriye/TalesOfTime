@@ -1,4 +1,4 @@
-
+<main>
     <div class="shop-detail-box-main">
         <div class="container">
             <div class="row">
@@ -19,13 +19,13 @@
 					</a>
                         <ol class="carousel-indicators">
                             <li data-target="#carousel-example-1" data-slide-to="0" class="active">
-                                <img class="d-block w-100 img-fluid" src="images/smp-img-01.jpg" alt="" />
+                                <img class="d-block w-100 img-fluid" src="{{ $product->image1 }}" alt="" />
                             </li>
                             <li data-target="#carousel-example-1" data-slide-to="1">
-                                <img class="d-block w-100 img-fluid" src="images/smp-img-02.jpg" alt="" />
+                                <img class="d-block w-100 img-fluid" src="{{ $product->image2 }}" alt="" />
                             </li>
                             <li data-target="#carousel-example-1" data-slide-to="2">
-                                <img class="d-block w-100 img-fluid" src="images/smp-img-03.jpg" alt="" />
+                                <img class="d-block w-100 img-fluid" src="{{ $product->image3 }}" alt="" />
                             </li>
                         </ol>
                     </div>
@@ -71,13 +71,20 @@
                             <div class="item">
                                 <div class="products-single fix">
                                     <div class="box-img-hover">
-                                        <img src="{{ $featured_product->image1 }}" class="img-fluid" alt="Image">
+                                        <div>
+                                            <img src="{{ $featured_product->image1 }}" class="img-fluid" alt="Image">
+
+                                        </div>
+                                      
                                         <div class="mask-icon">
                                             <ul>
                                                 <li><a href="{{ route('product.details',['product_slug'=>$featured_product->slug]) }}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                             </ul>
-                                            <a class="cart" href="#" wire:click.prevent='store({{ $product->id }},"{{ $product->name }}",{{ $product->price }})'>Add to Cart</a>
-                                        </div>
+                                            <div>
+                                                <a class="cart" href="#" wire:click.prevent='store({{ $product->id }},"{{ $product->name }}",{{ $product->price }})'>Add to Cart</a>
+
+                                            </div>
+                                            
                                     </div>
                                     <div class="why-text">
                                         <h4>{{Str::ucfirst($featured_product->name)  }}</h4>
@@ -93,3 +100,6 @@
 
         </div>
     </div>
+
+</main>
+ 

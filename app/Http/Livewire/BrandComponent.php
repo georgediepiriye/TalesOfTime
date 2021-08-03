@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithPagination;
+use Cart;
 
 use App\Models\Brand;
 
@@ -16,6 +17,13 @@ class BrandComponent extends Component{
         $this->sorting = 'default';
         $this->brand_slug = $brand_slug;
     }
+
+      //function to store product in cart
+  public function store($product_id,$product_name,$product_price){
+    Cart::add($product_id,$product_name,1,$product_price)->associate('App\Models\Product');
+    session()->flash('message','Product added Successfully!');
+    return redirect()->route('product.cart');
+}
 
 
 

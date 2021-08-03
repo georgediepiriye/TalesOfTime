@@ -810,10 +810,10 @@ select {
 .prose ol[type="a"] {
 	--list-counter-style: lower-alpha;
 }
-.prose ol[type="A" s] {
+.prose ol[type="A" ] {
 	--list-counter-style: upper-alpha;
 }
-.prose ol[type="a" s] {
+.prose ol[type="a" ] {
 	--list-counter-style: lower-alpha;
 }
 .prose ol[type="I"] {
@@ -822,10 +822,10 @@ select {
 .prose ol[type="i"] {
 	--list-counter-style: lower-roman;
 }
-.prose ol[type="I" s] {
+.prose ol[type="I" ] {
 	--list-counter-style: upper-roman;
 }
-.prose ol[type="i" s] {
+.prose ol[type="i" ] {
 	--list-counter-style: lower-roman;
 }
 .prose ol[type="1"] {
@@ -1088,6 +1088,17 @@ select {
 .prose > :last-child {
 	margin-bottom: 0;
 }
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
+}
 .fixed {
 	position: fixed;
 }
@@ -1121,9 +1132,36 @@ select {
 .col-span-6 {
 	grid-column: span 6 / span 6;
 }
+.float-right {
+	float: right;
+}
 .mx-auto {
 	margin-left: auto;
 	margin-right: auto;
+}
+.my-5 {
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+}
+.my-4 {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.my-0 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.my-3 {
+	margin-top: 0.75rem;
+	margin-bottom: 0.75rem;
+}
+.mx-2 {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+.my-1 {
+	margin-top: 0.25rem;
+	margin-bottom: 0.25rem;
 }
 .ml-3 {
 	margin-left: 0.75rem;
@@ -1193,6 +1231,15 @@ select {
 }
 .mb-4 {
 	margin-bottom: 1rem;
+}
+.mb-3 {
+	margin-bottom: 0.75rem;
+}
+.mb-2 {
+	margin-bottom: 0.5rem;
+}
+.mb-1 {
+	margin-bottom: 0.25rem;
 }
 .ml-auto {
 	margin-left: auto;
@@ -2077,10 +2124,6 @@ select {
 		margin-left: 1.5rem;
 	}
 
-	.sm\:ml-0 {
-		margin-left: 0px;
-	}
-
 	.sm\:block {
 		display: block;
 	}
@@ -2095,10 +2138,6 @@ select {
 
 	.sm\:h-10 {
 		height: 2.5rem;
-	}
-
-	.sm\:h-20 {
-		height: 5rem;
 	}
 
 	.sm\:w-10 {
@@ -2223,10 +2262,6 @@ select {
 
 	.sm\:text-left {
 		text-align: left;
-	}
-
-	.sm\:text-right {
-		text-align: right;
 	}
 }
 @media (min-width: 768px) {

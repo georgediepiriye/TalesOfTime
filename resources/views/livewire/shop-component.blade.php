@@ -87,7 +87,6 @@
                                                           
                                                        </ul>
                                                       <a href="#" class="cart" wire:click.prevent='store({{ $product->id }},"{{ $product->name }}",{{ $product->price }})'>Add to Cart</a>
-   
                                                    </div>
                                                </div>
                                                <div class="why-text">
