@@ -61,39 +61,47 @@
                 </div>
             </div>
 
-            <div class="row my-5">
-                <div class="col-lg-12">
-                    <div class="title-all text-center">
-                        <h1>Featured Products</h1>
+            <div class="products-box">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="title-all text-center">
+                                <h1>Featured Products</h1>
+                               
+                            </div>
+                        </div>
                     </div>
-                    <div class="featured-products-box owl-carousel owl-theme">
-                        @foreach ($featured_products as $featured_product )
-                            <div class="item">
+                    <div class="row">
+                        @foreach ($featured_products as $featured_product)
+                            <div class="col-lg-3 col-md-6 ">
                                 <div class="products-single fix">
                                     <div class="box-img-hover">
-                                        <div>
-                                            <img src="{{ $featured_product->image1 }}" class="img-fluid" alt="Image">
-
+                                        <div class="type-lb">
+                                            <p class="new">New</p>
                                         </div>
-                                      
+                                        <img src="{{ $featured_product->image1 }}" class="img-fluid" alt="Image">
                                         <div class="mask-icon">
                                             <ul>
                                                 <li><a href="{{ route('product.details',['product_slug'=>$featured_product->slug]) }}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+            
                                             </ul>
                                             <div>
-                                                <a class="cart" href="#" wire:click.prevent='store({{ $product->id }},"{{ $product->name }}",{{ $product->price }})'>Add to Cart</a>
-
+                                                <a href="#" class="cart" wire:click.prevent='store({{ $featured_product->id }},"{{ $featured_product->name }}",{{ $featured_product->price }})'>Add to Cart</a>
                                             </div>
                                             
+                                        </div>
                                     </div>
                                     <div class="why-text">
-                                        <h4>{{Str::ucfirst($featured_product->name)  }}</h4>
-                                        <h5>₦{{ number_format($product->price) }}</h5>
+                                        <h4>{{ $featured_product->name }}</h4>
+                                        <h5><b> ₦{{ number_format($featured_product->price) }}</b> </h5>
                                     </div>
                                 </div>
                             </div>
+                                
                         @endforeach
-                      
+                       
+            
+                
                     </div>
                 </div>
             </div>

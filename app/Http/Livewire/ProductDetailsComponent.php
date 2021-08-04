@@ -26,7 +26,7 @@ class ProductDetailsComponent extends Component
     public function render()
     {
         $product = Product::where('slug',$this->product_slug)->first();
-        $featured_products = Product::where('featured',1)->paginate(6);
+        $featured_products = Product::where('featured',1)->paginate(4);
         return view('livewire.product-details-component',[
             'product'=>$product,
             'featured_products'=> $featured_products
