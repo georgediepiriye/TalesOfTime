@@ -91,6 +91,8 @@
                                                 @if (Hash::check('admin12345', Auth::user()->password))
                                                     <li><a class="account-dropdown" href="{{ route('admin.brands') }}">Brands</a></li>
                                                     <li><a class="account-dropdown"  href="{{ route('admin.products') }}">Products</a></li>
+                                                    <li><a class="account-dropdown"  href="#">Orders</a></li>
+                                                    <li><a class="account-dropdown"  href="#">Transactions</a></li>
                                                   
                                                 @endif
                                                 <form id="logout-form" method="post" action="{{ route('logout') }}">
